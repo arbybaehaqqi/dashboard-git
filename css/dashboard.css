@@ -10683,6 +10683,7 @@ body,
   min-height: 100%;
 }
 
+
 .wrapper {
   position: relative;
 }
@@ -11677,6 +11678,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
     margin-left: 0;
   }
 }
+
 
 @media (min-width: 768px) {
   .sidebar-mini-md .content-wrapper,
@@ -24067,8 +24069,8 @@ body.text-sm .input-group-text {
 .dark-mode .custom-file-label::after,
 .dark-mode .custom-control-label::before,
 .dark-mode .input-group-text {
-  background-color: #343a40;
-  color: #fff;
+  background-color: #fff;
+  color: #343a40;
 }
 
 .dark-mode .form-control:not(.form-control-navbar):not(.form-control-sidebar):not(.is-invalid):not(:focus),
@@ -35043,6 +35045,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   border-top: 0;
   color: #666;
   padding: 20px;
+}
+
+.form-number {
+	text-align: right;
 }
 
 .login-card-body .input-group .form-control,

@@ -51,11 +51,11 @@
             </a></li>
           </ul>
         </li>
-        <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-book"></i>
+        <li class="nav-item menu-open"> <a href="#" class="nav-link active"> <i class="nav-icon fas fa-book"></i>
           <p> DATA <i class="fas fa-angle-left right"></i></p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"> <a href="IKPA.html" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+            <li class="nav-item"> <a href="IKPA.html" class="nav-link active"> <i class="far fa-circle nav-icon"></i>
               <p>IKPA</p>
             </a></li>
             <li class="nav-item"> <a href="realiasi.html" class="nav-link"> <i class="far fa-circle nav-icon"></i>
@@ -79,7 +79,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Overview</h1>
+          <h1 class="m-0">DATA</h1>
         </div>
         <!-- /.col -->
         <div class="col-sm-6">
@@ -95,40 +95,78 @@
     <section class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
+          <div class="card col-md-12">
+            <div class="card-header text-center">
+              <h5>IKPA</h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="chart-responsive">
+                    <canvas id="invChart" style="height:200px; min-height:200px"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="col-md-12">
+                <table width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-circle text-primary"></i> Kualitas Perencanaan Anggaran</td>
+                      <td style="text-align: right">0</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-circle text-warning"></i> Kualitas Pelaksanaan Anggaran</td>
+                      <td style="text-align: right">0</td>
+                    </tr>
+					  <tr>
+                      <td><i class="fas fa-circle text-danger"></i> Kualitas Hasil Pelaksanaan Anggaran</td>
+                      <td style="text-align: right">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+		  
+        <div class="col-md-8">
           <div class="card">
             <div class="card-header">
-              <h2 class="card-title">IKPA</h2>
+              <h2 class="card-title">Input - Indikator Kinerja Pelaksanaan Anggaran</h2>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form class="form-horizontal">
               <div class="card-body">
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-6 col-form-label">Kualitas Perencanaan Anggaran</label>
+                  <label for="iKPerencanaanA" class="col-sm-6 col-form-label">Kualitas Perencanaan Anggaran</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="iKPerencanaanA">
+                    <input type="number" class="form-control form-number" id="iKPerencanaanA">
+					  
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-6 col-form-label">Kualitas Pelaksanaan Anggaran</label>
+                  <label for="iKPelaksanaanA" class="col-sm-6 col-form-label">Kualitas Pelaksanaan Anggaran</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="iKPelaksanaanA">
+                    <input type="number" class="form-control form-number" id="iKPelaksanaanA">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-6 col-form-label">Kualitas Hasil Pelaksanaan Anggaran</label>
+                  <label for="iKHPelaksanaanA" class="col-sm-6 col-form-label">Kualitas Hasil Pelaksanaan Anggaran</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="iKHPelaksanaanA">
+                    <input type="number" class="form-control form-number" id="iKHPelaksanaanA">
                   </div>
                 </div>
                 <div class="form-group row"> </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                <button type="submit" class="btn btn-success"><i class="nav-icon far fa-edit"></i> Edit</button>
-                <button type="submit" class="btn btn-info"><i class="nav-icon far fa-save"></i> Simpan</button>
-<button type="submit" class="btn btn-danger float-right"><i class="nav-icon fas fa-ban"></i> Batal</button>
+                  <button type="submit" class="btn btn-info float-right" disabled><i class="nav-icon far fa-save"></i> Simpan</button>
+				  <button type="submit" class="btn btn-success float-right" style="margin-right: 0.5rem;"><i class="nav-icon far fa-edit"></i> Edit</button>
+<button type="submit" class="btn btn-danger" disabled><i class="nav-icon fas fa-ban"></i> Batal</button>
               </div>
               <!-- /.card-footer -->
             </form>
@@ -154,5 +192,6 @@
 <script src="../../js/popper.min.js"></script> 
 <script src="../../js/bootstrap-4.4.1.js"></script> 
 <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../js/dashboard-charts.js"></script>
 </body>
 </html>
